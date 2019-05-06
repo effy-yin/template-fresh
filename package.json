@@ -1,0 +1,20 @@
+{
+  "name": "fresh",
+  "version": "1.0.0",
+  "description": "a template called fresh",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "template"
+  ],
+  "author": "Effy",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {}
+}
