@@ -2,4 +2,4 @@
 
 A beautiful template
 
-![screen](https://raw.githubusercontent.com/dodoroy/template-refresh/master/page.jpg)
+![screen](https://github.com/dodoroy/template-fresh/blob/master/page.jpg?raw=true)
