@@ -1,0 +1,143 @@
+$layout-breakpoint-small: 960px;
+$text-color: #333;
+$link-color: #7aa20d;
+$link-color-hover: #ed6e46;
+$background-color: #eff4ea;
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding:0;
+    margin:0;
+}
+a {
+    color: $link-color;
+    &:hover {
+        color: $link-color-hover;
+    }
+}
+h2 {
+    margin-top: 50px;
+    color: $link-color-hover;
+    text-align: center;
+}
+
+p {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    color: $text-color;
+    font-size: 17px;
+    line-height: 30px;
+}
+
+.header {
+    background: $background-color;
+    border-bottom: 4px solid #dbba97;
+
+    .header-pic,.header-pic-small {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    .header-pic {
+        display: none;
+    }
+}
+main {
+    .button-link {
+        color: $link-color-hover;
+        border: 2px solid $link-color-hover;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 4px 6px;
+        &:hover {
+            color: $link-color;
+            border-color: $link-color;
+        }
+    }
+    .button-rows {
+        margin: 0 auto;
+        width: 250px;
+        .button-link {
+            display: block;
+            font-size: 32px;
+            margin-top: 50px;
+            text-align: center;
+        }
+    }
+    section {
+        margin: 0 auto;
+        width: 88%;
+
+        .pic {
+            text-align: center;
+
+            .me {
+                margin-top: 40px;
+                border-radius: 3px;
+                max-width: 100%;
+            }
+        }
+
+    }
+    .site {
+        margin: 75px 0;
+        text-align: center;
+    }
+}
+.footer {
+    background: $background-color;
+    border-top: 4px solid #dbba97;
+    text-align: center;
+
+    .social {
+        margin: 40px auto;
+        width: 250px;
+        .fa {
+            color: #dbba97;
+            font-size: 47px;
+            &:hover {
+                color: $link-color-hover;
+            }
+        }
+        .fa-twitter {
+            padding-right: 50px;
+        }
+        .copyright {
+            font-size: 10px;
+        }
+    }
+}
+
+
+@media (min-width: $layout-breakpoint-small) {
+    h2 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 18px;
+    }
+
+    .header {
+        .header-pic {
+            display: block;
+        }
+        .header-pic-small {
+            display: none;
+        }
+    }
+
+    main {
+        .button-rows {
+            width: 600px;
+            display: flex;
+            justify-content: center;
+            .button-link:first-of-type {
+                margin-right: 145px;
+            }
+        }
+        section {
+            width: 80%;
+        }
+    }
+}
+
