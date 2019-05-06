@@ -2,10 +2,6 @@ const { src, dest, series, watch } = require('gulp');
 const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
 
-// function clean(cb) {
-//     cb()
-// }
-
 function cssTranspile(cb) {
     return src('style.scss')
         .pipe(sass.sync().on('error', sass.logError))
@@ -20,8 +16,7 @@ function cssMinify(cb) {
 }
 
 
-
-// watch(['style.scss'], series(cssTranspile, cssMinify));
+watch(['style.scss'], series(cssTranspile, cssMinify));
 
 exports.default = series( cssTranspile, cssMinify);
 
