@@ -1,13 +1,40 @@
 $layout-breakpoint-small: 960px;
+$layout-breakpoint-middle: 1200px;
 $text-color: #333;
 $link-color: #7aa20d;
 $link-color-hover: #ed6e46;
 $background-color: #eff4ea;
+$brown-color: #60432d;
+$book-text-color: #737373;
+$border-color: #dbba97;
 
 body {
     font-family: 'Open Sans', sans-serif;
-    padding:0;
-    margin:0;
+    font-size: 16px;
+    color: $text-color;
+}
+h2 {
+    margin-top: 42px;
+    color: $link-color-hover;
+    text-align: center;
+}
+h3 {
+    font-size: 19px;
+    font-weight: normal;
+}
+h4 {
+    font-size: 18px;
+    font-weight: normal;
+}
+p {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    line-height: 30px;
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
 }
 a {
     color: $link-color;
@@ -15,129 +42,262 @@ a {
         color: $link-color-hover;
     }
 }
-h2 {
-    margin-top: 50px;
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.button-link {
     color: $link-color-hover;
-    text-align: center;
-}
-
-p {
-    font-family: 'Lora', serif;
-    font-size: 16px;
-    color: $text-color;
-    font-size: 17px;
-    line-height: 30px;
-}
-
-.header {
-    background: $background-color;
-    border-bottom: 4px solid #dbba97;
-
-    .header-pic,.header-pic-small {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-    }
-    .header-pic {
-        display: none;
+    border: 2px solid $link-color-hover;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 4px 10px;
+    &:hover {
+        color: $link-color;
+        border-color: $link-color;
     }
 }
-main {
-    .button-link {
-        color: $link-color-hover;
-        border: 2px solid $link-color-hover;
-        font-size: 18px;
-        text-decoration: none;
-        padding: 4px 10px;
-        &:hover {
-            color: $link-color;
-            border-color: $link-color;
-        }
+.button-rows {
+    display: flex;
+    justify-content: center;
+
+    .button-link:first-of-type {
+        margin-right: 60px;
     }
-    .button-rows {
-        margin: 0 auto;
-        width: 250px;
-        .button-link {
+}
+
+.article {
+    header {
+        background: $background-color;
+        border-bottom: 4px solid $border-color;
+
+        .header-pic,.header-pic-small {
             display: block;
-            font-size: 32px;
-            margin-top: 50px;
-            text-align: center;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        .header-pic {
+            display: none;
         }
     }
-    section {
-        margin: 0 auto;
-        width: 88%;
+    main {
 
-        .pic {
-            text-align: center;
+        .button-rows {
 
-            .me {
-                margin-top: 40px;
-                border-radius: 3px;
-                max-width: 100%;
+            .button-link {
+                font-size: 26px;
+                margin-top: 50px;
             }
         }
+        section {
+            margin: 0 auto;
+            width: 88%;
 
+            .pic {
+                text-align: center;
+
+                .me {
+                    margin-top: 40px;
+                    border-radius: 3px;
+                    max-width: 100%;
+                }
+            }
+
+        }
+        .site {
+            margin: 75px 0;
+            text-align: center;
+        }
     }
-    .site {
-        margin: 75px 0;
+    footer {
+        background: $background-color;
+        border-top: 4px solid $border-color;
         text-align: center;
+
+        .social {
+            margin: 40px auto;
+            width: 250px;
+            .fa {
+                color: $border-color;
+                font-size: 47px;
+                &:hover {
+                    color: $link-color-hover;
+                }
+            }
+            .fa-twitter {
+                padding-right: 50px;
+            }
+            .copyright {
+                font-size: 10px;
+            }
+        }
     }
 }
-.footer {
-    background: $background-color;
-    border-top: 4px solid #dbba97;
-    text-align: center;
 
-    .social {
-        margin: 40px auto;
-        width: 250px;
-        .fa {
-            color: #dbba97;
-            font-size: 47px;
-            &:hover {
-                color: $link-color-hover;
-            }
+
+
+.book {
+    color: $book-text-color;
+
+    .primary-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 8px;
+        background: $background-color;
+        width: 100%;
+        .main-pic-2 {
+            display: none;
+        }
+        .cover-3 {
+            display: none;
         }
         .fa-twitter {
-            padding-right: 50px;
+            display: none;
         }
-        .copyright {
-            font-size: 10px;
+        .toc {
+            padding: 12px 15px;
+            font-weight: bold;
+            font-size: 23px;
+            font-family: 'Nunito', sans-serif;
+            color: #ed6e46;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            &.is-active+ul {
+                display: block;
+            }
+            &.is-active .fa-chevron-down {
+                transform: rotateX(180deg);
+            }
         }
+        ul {
+            margin-top: 0;
+            padding-left: 15px;
+            display: none;
+            li {
+                list-style: none;
+                background: $background-color;
+                width: 100%;
+                &:last-of-type a {
+                    border-bottom: none;
+                }
+            }
+            a {
+                display: block;
+                padding: 10px 15px 10px 0;
+                border-bottom: 1px solid $border-color;
+                text-decoration: none;
+                font-size: 16px;
+            }
+        }
+    }
+    .r-side-bar {
+        display: none;
+    }
+    header {
+        text-align: center;
+        h1,.by {
+            color: $brown-color;
+
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        .by {
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+    }
+    .main-content {
+        padding: 20px 40px;
+
+    }
+
+    footer {
+        text-align: center;
     }
 }
 
 
 @media (min-width: $layout-breakpoint-small) {
+    body {
+        font-size: 18px;
+    }
     h2 {
         font-size: 32px;
     }
     p {
         font-size: 18px;
     }
+    .article {
 
-    .header {
-        .header-pic {
-            display: block;
+        .header {
+            .header-pic {
+                display: block;
+            }
+            .header-pic-small {
+                display: none;
+            }
         }
-        .header-pic-small {
-            display: none;
+
+        main {
+
+
+            section {
+                width: 80%;
+            }
         }
     }
 
-    main {
-        .button-rows {
-            width: 600px;
-            display: flex;
-            justify-content: center;
-            .button-link:first-of-type {
-                margin-right: 145px;
+    .book {
+        margin-left: 320px;
+        .primary-nav {
+            padding-right: 15px;
+            float: left;
+            width: 300px;
+            height: 100%;
+            .cover-3 {
+                display: block;
+                margin: 30px 0 20px 0;
+            }
+            .toc {
+                display: none;
+            }
+            ul {
+                display: block;
+                a {
+                    padding: 8px 0;
+                    font-size: 15px;
+                }
+            }
+
+            .fa-twitter {
+                margin: 5px 0 0 110px;
+                display: block;
+                position: fixed;
+                text-decoration: none;
+                font-size: 40px;
+                color: #ed6e46;
             }
         }
-        section {
-            width: 80%;
+
+        header {
+            .main-pic-1 {
+                display: none;
+            }
+        }
+        .r-side-bar {
+            display: block;
+            position: fixed;
+            right: 0;
+            top: 0;
         }
     }
 }
-
