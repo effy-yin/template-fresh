@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>book</title>
+    <link rel="stylesheet" href="assets/css/normailize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+</head>
+<body class="book">
+<nav class="primary-nav">
+    <img class="main-pic-2" src="assets/images/cover1.png" alt="Illustration of book">
+    <img class="cover-3" width="175px" src="assets/images/cover3.svg" alt="Illustration of book cover">
+    <a href="#" class="toc">
+        TOC<i class="fa fa-chevron-down"></i>
+    </a>
+    <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#section-1">Section 1: Document Organization</a></li>
+        <li><a href="#section-2">Section 2: Basic Shapes &amp; Paths</a></li>
+        <li><a href="#section-3">Section 3: Workspace</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+    </ul>
+    <a href="https://twitter.com/JoniTrythall"><i class="fa fa-twitter"></i></a>
+</nav>
+
+<img class="r-side-bar" src="assets/images/rsidebar.svg" alt="Cherries">
+
+<header>
+    <img class="main-pic-1" src="assets/images/cover1.png" alt="Illustration of book on desk">
+    <h1>A Guide to learn JavaScript</h1>
+    <h2><a class="by" href="http://jonibologna.com/">By Effy</a></h2>
+    <div class="button-rows">
+        <a class="button-link" href="#">View Source</a>
+        <a class="button-link" href="#">Audio Version</a>
+
+    </div>
+
+</header>
+
+<div class="main-content">
+    <ul>
+        <li><a href="#">link1</a></li>
+        <li><a href="#">link2</a></li>
+        <li><a href="#">link3</a> for something!</li>
+    </ul>
+    <h2 class="section-header" id="intro">Introduction</h2>
+    <p>There are <a href="http://css-tricks.com/using-svg/">a number of ways to include SVG</a> in your projects: inline, an <code>&lt;img&gt;</code>, a background-image, an <code>&lt;object&gt;</code>, or as Data URI's. We will be specifically addressing
+        the use of SVG inline which involves writing SVG code within the body of a properly structured HTML document.</p>
+    <h3>this is header3</h3>
+    <p>Writing inline SVG enables very useful editing powers and lets us as the author have complete access to all the graphical elements individually. Within this code we are generating graphics that scale without losing image quality, are searchable, and
+        enhance accessibility.</p>
+    <h3>a header3 title</h3>
+    <p>Writing inline SVG enables very useful editing powers and lets us as the author have complete access to all the graphical elements individually. Within this code we are generating graphics that scale without losing image quality, are searchable, and
+        enhance accessibility.</p>
+    <h2 class="section-header" id="section-1">Section 1</h2>
+    <p>Writing inline SVG enables very useful editing powers and lets us as the author have complete access to all the graphical elements individually. Within this code we are generating graphics that scale without losing image quality, are searchable, and
+        enhance accessibility.</p>
+    <h2 class="section-header" id="section-2">Section 2</h2>
+    <p>Writing inline SVG enables very useful editing powers and lets us as the author have complete access to all the graphical elements individually. Within this code we are generating graphics that scale without losing image quality, are searchable, and
+        enhance accessibility.</p>
+    <h2 class="section-header" id="section-3">Section 3</h2>
+    <p>Writing inline SVG enables very useful editing powers and lets us as the author have complete access to all the graphical elements individually. Within this code we are generating graphics that scale without losing image quality, are searchable, and
+        enhance accessibility.</p>
+    <h2 class="section-header" id="conclusion">Conclusion</h2>
+    <p>Writing inline SVG enables very useful editing powers and lets us as the author have complete access to all the graphical elements individually. Within this code we are generating graphics that scale without losing image quality, are searchable, and
+        enhance accessibility.</p>
+    <p><img class="end" src="assets/images/theend2.png" alt="The End"></p>
+</div>
+
+
+<footer>
+    <div class="footer-content">
+        Made with ❤️ by <a href="#">Effy</a>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+
+    $('.toc').on('click', function(evt) {
+        evt.preventDefault();
+
+        $(this).toggleClass('is-active');
+    });
+
+    $('.primary-nav ul a').on('click', function(evt) {
+        $('.toc').removeClass('is-active');
+    });
+
+</script>
+</body>
+</html>
